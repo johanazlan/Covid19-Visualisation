@@ -1,0 +1,43 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "COVID-19 Cases on 1st September 2021",
+    "width": 850,
+    "height": 600,
+    "projection": {"type": "equirectangular"},
+    
+    "data": {
+        "url": "https://raw.githubusercontent.com/johanazlan/Data-Visualization-Homework-Week-9/main/js/malaysia_map.json", 
+        "format": {"type": "topojson", "feature": "malaysia_map"}
+    }, 
+
+    "transform": [
+        {
+            "lookup": "properties.locname",
+            "from": {
+                "data": {
+                    "url": "https://raw.githubusercontent.com/johanazlan/Data-Visualization-Homework-Week-9/main/data/cases_state_small.csv"
+                }, 
+                "key": "state",
+                "fields": ["cases_new"]
+            }
+        },
+        {"calculate": "datum.cases_new", "as": "New Cases"}
+        
+    ],
+
+    "mark": {"type": "geoshape"}, 
+    "encoding": {
+        "color": {
+            "field": "New Cases",
+            "type": "quantitative",
+            "scale": {
+                "type": "threshold",
+                "domain": [500, 1000, 1500, 2000]
+            }
+        },  
+        "tooltip": [
+            {"field": "properties.locname", "type": "nominal", "title": "State"},
+            {"field": "New Cases", "type": "quantitative"}
+        ]
+    }
+}
