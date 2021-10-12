@@ -1,12 +1,16 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "COVID-19 Cases on 1st September 2021",
-    "width": 850,
-    "height": 600,
+    "title": {
+        "text": "Cumulative COVID-19 Cases per 1,000 population from 1st June 2021 to 1st September 2021",
+        "font": "sans-serif",
+        "fontSize": 17
+    },
+    "width": 800,
+    "height": 400,
     "projection": {"type": "equirectangular"},
-    
+
     "data": {
-        "url": "https://raw.githubusercontent.com/johanazlan/Data-Visualization-Homework-Week-9/main/js/malaysia_map.json", 
+        "url": "https://raw.githubusercontent.com/johanazlan/Data-Visualization-Assignment-2/main/js/malaysia_map.json", 
         "format": {"type": "topojson", "feature": "malaysia_map"}
     }, 
 
@@ -15,29 +19,42 @@
             "lookup": "properties.locname",
             "from": {
                 "data": {
-                    "url": "https://raw.githubusercontent.com/johanazlan/Data-Visualization-Homework-Week-9/main/data/cases_state_small.csv"
+                    "url": "https://raw.githubusercontent.com/johanazlan/Data-Visualization-Assignment-2/main/data/cases_state_sum.csv"
                 }, 
                 "key": "state",
-                "fields": ["cases_new"]
+                "fields": ["cases_new", "population"]
             }
         },
-        {"calculate": "datum.cases_new", "as": "New Cases"}
+        {"calculate": "datum.cases_new/datum.population * 1000", "as": "New cases per 1,000 population"}
         
     ],
 
-    "mark": {"type": "geoshape"}, 
+    "mark": {
+        "type": "geoshape", 
+        "stroke": "#212121", 
+        "strokeWidth": 1
+    }, 
     "encoding": {
         "color": {
-            "field": "New Cases",
+            "field": "New cases per 1,000 population",
             "type": "quantitative",
             "scale": {
                 "type": "threshold",
-                "domain": [500, 1000, 1500, 2000]
+                "domain": [1, 20, 50, 100], 
+                "range": ["#fef0d9", "#fdcc8a", "#fc8d59", "#e34a33", "#b30000"]
             }
         },  
         "tooltip": [
             {"field": "properties.locname", "type": "nominal", "title": "State"},
-            {"field": "New Cases", "type": "quantitative"}
+            {"field": "New cases per 1,000 population", "type": "quantitative", "format": ".1f"}
+            
         ]
-    }
+    },
+    "config": {
+        "style": {
+          "cell": {
+            "stroke": "transparent"
+          }
+        }
+      }
 }
