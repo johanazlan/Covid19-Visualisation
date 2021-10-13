@@ -1,0 +1,65 @@
+"state","adult_vax_type","num_adult_vax","child_vax_type","num_child_vax"
+"Johor","partial_vax_adult",1993977,"partial_vax_child",2481
+"Kedah","partial_vax_adult",993019,"partial_vax_child",2043
+"Kelantan","partial_vax_adult",719242,"partial_vax_child",979
+"Melaka","partial_vax_adult",512138,"partial_vax_child",1950
+"Negeri Sembilan","partial_vax_adult",712727,"partial_vax_child",940
+"Pahang","partial_vax_adult",675283,"partial_vax_child",717
+"Perak","partial_vax_adult",1118854,"partial_vax_child",2234
+"Perlis","partial_vax_adult",129203,"partial_vax_child",96
+"Pulau Pinang","partial_vax_adult",1070090,"partial_vax_child",513
+"Sabah","partial_vax_adult",1505781,"partial_vax_child",4795
+"Sarawak","partial_vax_adult",1661391,"partial_vax_child",3702
+"Selangor","partial_vax_adult",3774458,"partial_vax_child",3798
+"Terengganu","partial_vax_adult",606454,"partial_vax_child",2441
+"W.P. Kuala Lumpur","partial_vax_adult",2428702,"partial_vax_child",1656
+"W.P. Labuan","partial_vax_adult",56788,"partial_vax_child",52
+"W.P. Putrajaya","partial_vax_adult",105025,"partial_vax_child",39
+"Johor","full_vax_adult",1227924,"partial_vax_child",2481
+"Kedah","full_vax_adult",657224,"partial_vax_child",2043
+"Kelantan","full_vax_adult",536232,"partial_vax_child",979
+"Melaka","full_vax_adult",365382,"partial_vax_child",1950
+"Negeri Sembilan","full_vax_adult",598157,"partial_vax_child",940
+"Pahang","full_vax_adult",538391,"partial_vax_child",717
+"Perak","full_vax_adult",800594,"partial_vax_child",2234
+"Perlis","full_vax_adult",105122,"partial_vax_child",96
+"Pulau Pinang","full_vax_adult",719850,"partial_vax_child",513
+"Sabah","full_vax_adult",1047109,"partial_vax_child",4795
+"Sarawak","full_vax_adult",1671990,"partial_vax_child",3702
+"Selangor","full_vax_adult",3382373,"partial_vax_child",3798
+"Terengganu","full_vax_adult",365686,"partial_vax_child",2441
+"W.P. Kuala Lumpur","full_vax_adult",2090917,"partial_vax_child",1656
+"W.P. Labuan","full_vax_adult",54263,"partial_vax_child",52
+"W.P. Putrajaya","full_vax_adult",105699,"partial_vax_child",39
+"Johor","partial_vax_adult",1993977,"full_vax_child",239
+"Kedah","partial_vax_adult",993019,"full_vax_child",191
+"Kelantan","partial_vax_adult",719242,"full_vax_child",450
+"Melaka","partial_vax_adult",512138,"full_vax_child",315
+"Negeri Sembilan","partial_vax_adult",712727,"full_vax_child",266
+"Pahang","partial_vax_adult",675283,"full_vax_child",308
+"Perak","partial_vax_adult",1118854,"full_vax_child",321
+"Perlis","partial_vax_adult",129203,"full_vax_child",24
+"Pulau Pinang","partial_vax_adult",1070090,"full_vax_child",149
+"Sabah","partial_vax_adult",1505781,"full_vax_child",1553
+"Sarawak","partial_vax_adult",1661391,"full_vax_child",2512
+"Selangor","partial_vax_adult",3774458,"full_vax_child",1562
+"Terengganu","partial_vax_adult",606454,"full_vax_child",222
+"W.P. Kuala Lumpur","partial_vax_adult",2428702,"full_vax_child",905
+"W.P. Labuan","partial_vax_adult",56788,"full_vax_child",33
+"W.P. Putrajaya","partial_vax_adult",105025,"full_vax_child",23
+"Johor","full_vax_adult",1227924,"full_vax_child",239
+"Kedah","full_vax_adult",657224,"full_vax_child",191
+"Kelantan","full_vax_adult",536232,"full_vax_child",450
+"Melaka","full_vax_adult",365382,"full_vax_child",315
+"Negeri Sembilan","full_vax_adult",598157,"full_vax_child",266
+"Pahang","full_vax_adult",538391,"full_vax_child",308
+"Perak","full_vax_adult",800594,"full_vax_child",321
+"Perlis","full_vax_adult",105122,"full_vax_child",24
+"Pulau Pinang","full_vax_adult",719850,"full_vax_child",149
+"Sabah","full_vax_adult",1047109,"full_vax_child",1553
+"Sarawak","full_vax_adult",1671990,"full_vax_child",2512
+"Selangor","full_vax_adult",3382373,"full_vax_child",1562
+"Terengganu","full_vax_adult",365686,"full_vax_child",222
+"W.P. Kuala Lumpur","full_vax_adult",2090917,"full_vax_child",905
+"W.P. Labuan","full_vax_adult",54263,"full_vax_child",33
+"W.P. Putrajaya","full_vax_adult",105699,"full_vax_child",23
