@@ -1,7 +1,7 @@
 #choropleth_map {
     position: absolute;
     top: 100px;
-    left: 500px;
+    left: 200px;
 }
 
 #stacked_bar_vax {
@@ -22,7 +22,6 @@
     top: 80px;
     right: 0px;
 }
-
 
 #header {
     text-align: center;
