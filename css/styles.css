@@ -1,28 +1,21 @@
+html,
+body {
+    background-color: #F3FAF9;
+}
+
+.pure-u-1 img {
+    width: 100vw;
+}
+
 #choropleth_map {
-    position: absolute;
-    top: 100px;
-    left: 200px;
+    width: 90%;
+    height: 90%;
 }
 
-#stacked_bar_vax {
-    position: absolute;
-    left: 20px;
-    top: 60px;
-    text-align: left;
-}
-
-#vax_brands {
-    position: absolute;
-    top: 550px;
-    left: 20px;
+#pure-u-1-2 {
+    width: 50vw;
 }
 
 #daily_cases_recovery {
-    position: absolute;
-    top: 80px;
-    right: 0px;
-}
-
-#header {
-    text-align: center;
+    width: 50%
 }
