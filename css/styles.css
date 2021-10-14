@@ -7,19 +7,19 @@
 #stacked_bar_vax {
     position: absolute;
     left: 20px;
-    top: 100px;
+    top: 800px;
     text-align: left;
 }
 
 #vax_brands {
     position: absolute;
-    top: 550px;
+    top: 850px;
     left: 20px;
 }
 
 #daily_cases_recovery {
     position: absolute;
-    top: 80px;
+    top: 800px;
     right: 0px;
 }
 
