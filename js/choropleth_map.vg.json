@@ -34,9 +34,16 @@
             "field": "New cases per 1,000 population",
             "type": "quantitative",
             "scale": {
-                "type": "threshold",
+                "type": "linear",
                 "domain": [1, 20, 50, 100], 
                 "range": ["#fef0d9", "#fdcc8a", "#fc8d59", "#e34a33", "#b30000"]
+            }, 
+            "legend": {
+                "direction": "horizontal", 
+                "gradientLength": 180, 
+                "orient": "none",
+                "legendX": 30,
+                "legendY": 80
             }
         },  
         "tooltip": [
