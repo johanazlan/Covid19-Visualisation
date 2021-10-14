@@ -1,22 +1,74 @@
-<!Doctype html>
-<html>
-    <head>
-        <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
-        <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+<!DOCTYPE html>
+<html lang="en">
 
-        <!-- CSS file -->
-        <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">   
+<head>
+    <title>Document</title>
 
-    </head>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css" />
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+</head>
 
     <body>
-        <div id = "header"><h1>Covid 19 Pandemic in Malaysia</h1></div>
-        <br> <div id = "choropleth_map"></div><h3>Cumulative COVID-19 Cases per 1,000 population from 1st June 2021 to 1st September 2021</h3></br>    
-        <br> <div id = "stacked_bar_vax"></div> </br>
-        <div id = "vax_brands"></div>
-        <div id = "daily_cases_recovery"></div>
+        <div class = "pure-g" style = "margin-left: 2%; margin-right: 2%;">
+
+          <!-- Header -->
+          <div class = "pure-u-1" style="text-align: center;">
+            <div id = "header">
+              <br><h1>Covid 19 Pandemic In Malaysia</h1></br>
+            </div>
+          </div>
+
+          <!-- Covid Cases SECTION -->
+             <!-- Header - Here -->
+
+          <!-- Choropleth Map -->
+          <div class = "pure-u-1" style="text-align: center; border-style: solid;">
+            <h2>Cumulative COVID-19 Cases per 1,000 population from 1st June 2021 to 1st September 2021</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum accusantium magnam mollitia natus explicabo maxime temporibus commodi quos tempore assumenda eum accusamus placeat ipsam, cupiditate reprehenderit rerum et quasi cumque.</p>
+            <div id = "choropleth_map"></div>
+          </div>
+        
+          <!-- Daily Covid Cases and Recovery - Left -->
+          <div class = "pure-u-1-2" style="border-style: solid;">
+            <div id = "daily_cases_recovery" style="margin: 50;"></div>
+          </div>
+
+          <!-- Donut Chart for cluster analysis - Right -->
+          <div class = "pure-u-2-5" style="border-style: solid;  margin-left: 9%;">
+            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor cupiditate corporis nemo voluptatem amet 
+              laudantium animi officia facere commodi, a quia deleniti, blanditiis natus neque maiores voluptates, 
+              beatae iure possimus.</p>
+          </div>
+
+          <!-- VACCINATION SECTION -->
+             <!-- Header - Here -->
+
+          <!-- Daily vaccine administered - Left -->
+          <div class = "pure-u-1-2" style="border-style: solid;">
+            <div id = "stacked_bar_vax"></div>
+          </div>
+
+          <!-- Waffle Chart/Dot Matrix Chart/ for population vaccinated up to sept 1st 2021 - Right -->
+                      <!-- HERE -->
+
+
+          <!-- Vaccine Brands - Bottom -->
+          <div class = "pure-u-1" style="border-style: solid;">
+            <div id = "vax_brands"></div>
+          </div>
+
+          <!-- OTHER SECTION -->
+
+        </div>
+
+
 
         <script type="text/javascript">
 
