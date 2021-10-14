@@ -1,0 +1,46 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json", 
+    "title": {
+        "text": " Daily New Cases and Recoveries from 1st June 2021 to 1st September 2021",
+        "font": "sans-serif",
+        "fontSize": 17
+    },
+    "width": 680,
+    "height": 500,
+    "data": {"url": "https://raw.githubusercontent.com/johanazlan/Data-Visualization-Assignment-2/main/data/daily_cases_recovery_long.csv"},
+
+    "transform": [
+        {"calculate": "{'cases_new': 'Daily Cases', 'cases_recovered': 'Daily Recoveries'}[datum.type]", "as": "type"}
+    ], 
+
+    "mark": {
+        "type": "line",
+        "point": true
+
+    }, 
+    "encoding": {
+        "x": {"timeUnit": "monthdate", "field": "date", "type": "ordinal", "title": null, "axis": {"labelAngle": 0, "labelSeparation": 5}}, 
+        "y": {"field": "value", "type": "quantitative", "title": "Number of cases"}, 
+        "color": {
+            "field": "type", 
+            "type": "nominal", 
+            "scale": {
+                "domain": ["Daily Cases", "Daily Recoveries"]
+            }, 
+            "legend": {"title": null, "symbolType": "circle"}
+        },  
+        "tooltip": [
+            {"field": "date", "type": "temporal", "title": "Date"},
+            {"field": "type", "type":"nominal", "title": "Type"}, 
+            {"field": "value", "type": "quantitative", "title":"Number of cases"}
+        ]
+    },
+    "config": {
+        "style": {
+          "cell": {
+            "stroke": "transparent"
+          }
+        }
+      }
+    
+}

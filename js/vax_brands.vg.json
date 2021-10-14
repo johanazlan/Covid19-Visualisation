@@ -1,0 +1,45 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json", 
+    "title": {
+        "text": "Vaccine Brands used from 1st June 2021 to 1st September 2021",
+        "font": "sans-serif",
+        "fontSize": 17
+    },
+    "width": 800,
+    "height": 100,
+    "data": {"url": "https://raw.githubusercontent.com/johanazlan/Data-Visualization-Assignment-2/main/data/vax_brands.csv"},
+    "mark": {"type":"bar", "tooltip": true}, 
+    "transform": [
+        {"calculate": "datum.total_doses/18072239 * 100", "as": "percentage of vaccine brands used"}, 
+        {"calculate": "{'pfizer1': 'Pfizer', 'sinovac1': 'Sinovac', 'astra1': 'AstraZeneca', 'cansino': 'Cansino'}[datum.vaccine_brand]", "as": "Vaccine Brand"}
+    ],
+    "encoding": {
+        "x": {
+            "field": "percentage of vaccine brands used", 
+            "type": "quantitative", 
+            "sort": "descending", 
+            "axis": null
+        }, 
+        "y": {"axis":null}, 
+        "color":{
+            "field": "Vaccine Brand",
+            "type": "nominal", 
+            "scale": {
+                "domain": ["Pfizer", "Sinovac", "AstraZeneca", "Cansino"], 
+                "range": ["#adf7b6", "#a0ced9", "#ffc09f", "#fcf5c7"]
+            }
+        }, 
+        "tooltip": [
+            {"field": "Vaccine Brand", "type": "nominal", "title": "Vaccine Brand"},
+            {"field": "percentage of vaccine brands used", "type": "quantitative", "title": "% Used", "format": ".1f"}
+        ]
+        
+    },
+    "config": {
+        "style": {
+          "cell": {
+            "stroke": "transparent"
+          }
+        }
+      }
+}

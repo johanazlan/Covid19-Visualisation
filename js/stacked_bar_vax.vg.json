@@ -1,0 +1,42 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json", 
+    "title": {
+        "text": "Daily Vaccination Doses Administered from 1st June 2021 to 1st September 2021",
+        "font": "sans-serif",
+        "fontSize": 17
+    },
+    "width": 750,
+    "height": 400,
+    "data": {"url": "https://raw.githubusercontent.com/johanazlan/Data-Visualization-Assignment-2/main/data/vaccination_stacked_bar.csv"}, 
+    "transform": [
+        {"calculate": "{'daily_full': 'Fully Vaccinated', 'daily_partial': 'Partially Vaccinated'}[datum.vaccination_status]", "as": "vaccination_status"}, 
+        {"calculate": "datum.daily_partial", "as": "Partially Vaccinated"}
+    ],
+    "mark": {"type": "bar"}, 
+    "encoding": {
+        "x": {"timeUnit": "monthdate", "field": "date", "type":"ordinal", "title": null, "axis": {"labelAngle": 0, "labelSeparation": 5}}, 
+        "y": {"field": "value", "title": null, "axis": {"gridWidth": 0.5, "tickCount": 6}, "type": "quantitative"}, 
+        "color": {
+            "field": "vaccination_status", 
+            "type":"nominal", 
+            "scale": {
+                "domain": ["Fully Vaccinated", "Partially Vaccinated"],
+                "range": ["#bae4b3", "#31a354"]
+            }, 
+            "legend": {"title": "Vaccination Type", "symbolType": "circle"}
+        },  
+        "tooltip": [
+            {"field": "date", "type": "temporal", "title": "Date"},
+            {"field": "vaccination_status", "title": "Vaccination Type"},
+            {"field": "value", "type":"nominal", "title": "Doses Administered"}
+
+        ]
+    },
+    "config": {
+        "style": {
+          "cell": {
+            "stroke": "transparent"
+          }
+        }
+      }
+}
