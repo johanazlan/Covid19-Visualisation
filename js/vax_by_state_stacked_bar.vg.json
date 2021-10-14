@@ -1,0 +1,45 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json", 
+    "title": {
+        "text": " from 1st June 2021 to 1st September 2021",
+        "font": "sans-serif",
+        "fontSize": 17
+    },
+    "width": 850,
+    "height": 400,
+    "data": {"url": "https://raw.githubusercontent.com/johanazlan/Data-Visualization-Assignment-2/main/data/vaccination_by_state_stacked_bar.csv"}, 
+    "transform": [
+        {"calculate": "datum.num_adult_vax/datum.pop * 100", "as": "Vaccination rate for each state"}, 
+        {"calculate": "{'partial_vax_adult': 'Partially Vaccinated', 'full_vax_adult': 'Fully Vaccinated'}[datum.adult_vax_type]", "as": "adult_vax_type"}
+    ], 
+    "mark": {"type": "bar"}, 
+    "encoding": {
+        "x": {"field": "Vaccination rate for each state", "type":"quantitative", "title": null, "axis": null}, 
+        "y": {"field": "state", "type": "nominal", "title": null, "axis": {"ticks": false}}, 
+        "color": {
+            "field": "adult_vax_type", 
+            "type":"nominal", 
+            "scale": {
+                "domain": ["Fully Vaccinated", "Partially Vaccinated"],
+                "range": ["#bae4b3", "#31a354"]
+            }, 
+            "legend": {"title": "Vaccination Type", "symbolType": "circle"}
+        },  
+        "tooltip": [
+            {"field": "adult_vax_type", "title": "Vaccination Type"},
+            {"field": "Vaccination rate for each state", "type":"quantitative", "title": "% of Doses Administered"}
+
+        ]
+    },
+    "config": {
+        "style": {
+          "cell": {
+            "stroke": "transparent"
+          }
+        }
+      }
+
+
+
+
+}

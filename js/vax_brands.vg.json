@@ -5,7 +5,7 @@
         "font": "sans-serif",
         "fontSize": 17
     },
-    "width": 800,
+    "width": 1800,
     "height": 100,
     "data": {"url": "https://raw.githubusercontent.com/johanazlan/Data-Visualization-Assignment-2/main/data/vax_brands.csv"},
     "mark": {"type":"bar", "tooltip": true}, 
@@ -25,8 +25,18 @@
             "field": "Vaccine Brand",
             "type": "nominal", 
             "scale": {
-                "domain": ["Pfizer", "Sinovac", "AstraZeneca", "Cansino"], 
-                "range": ["#adf7b6", "#a0ced9", "#ffc09f", "#fcf5c7"]
+                "domain": ["Sinovac", "Pfizer", "Cansino", "AstraZeneca"], 
+                "range": ["#adf7b6", "#a0ced9", "#fcf5c7", "#ffc09f"]
+            },
+            "legend": {
+                "direction": "horizontal", 
+                "symbolType": "circle", 
+                "orient": "bottom-left", 
+                "title": null, 
+                "symbolSize": 120, 
+                "columnPadding": 30, 
+                "labelFontSize":12,
+                "labelFontWeight":500
             }
         }, 
         "tooltip": [
