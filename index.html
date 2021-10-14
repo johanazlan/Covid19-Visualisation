@@ -12,102 +12,11 @@
     </head>
 
     <body>
-
-    <div class = "grid-container">
-            <header class = "header"></header>
-            <main class = "main"></main>
-        
-        <main class="main">
-            <div class="main-header">
-              <div class="main-header__heading">Description</div>
-            </div>
-
-            <!-- Build the main section content cards -->
-            <style>
-              .main-cards1 {
-                column-count: 1;
-                column-gap: 10px;
-                margin: 40px;
-              }
-              
-              .card {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 99%;
-                margin-left: 10px;
-                margin-right: 10px;
-                background-color: white;
-                margin-bottom: 10px;
-                -webkit-column-break-inside: avoid;
-                padding: 24px;
-                box-sizing: border-box;
-                position: relative;
-              }
-            
-              /* Force varying heights to simulate dynamic content */
-              .card:first-child {
-                height: 660px;
-              }
-            
-              .card:nth-child(2) {
-                height: 700px;
-              }
-            
-              .card:nth-child(3) {
-                height: 275px;
-              }
-            </style>       
-
-            <div class="main-cards">
-                <div class="card">
-                   <br> <div id = "choropleth_map"></div><h3>Cumulative COVID-19 Cases per 1,000 population from 1st June 2021 to 1st September 2021</h3></br>
-                </div>
-                <div class="card">
-                    <br> <div id = "stacked_bar_vax"></div> </br>
-                    <div id = "vax_brands"></div>
-                    <div id = "daily_cases_recovery"></div>
-                </div>
-                <div class="card">Card</div>
-            </div>
-        </main>
-
-    <style>
-        .header {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 0 16px;
-          background-color: #648ca6;
-        }
-    </style>
-
-    <header class="header">
-        <div class="header__title"><h1>Covid 19 Pandemic in Malaysia</h1></div>
-    </header>
-
-    <style>
-      .header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 16px;
-        background-color: #648ca6;
-      }
-  </style>
-
-    <!-- The very first element inside of the <main> parent container --> 
-    <style>
-        .main-header {
-        display: flex;
-        justify-content: space-between;
-        margin: 40px;
-        padding: 20px;
-        height: 150px; /* Force our height since we don't have actual content yet */
-        background-color: #e3e4e6;
-        color: slategray;
-        }
-    </style>
+        <div id = "header"><h1>Covid 19 Pandemic in Malaysia</h1></div>
+        <br> <div id = "choropleth_map"></div><h3>Cumulative COVID-19 Cases per 1,000 population from 1st June 2021 to 1st September 2021</h3></br>    
+        <br> <div id = "stacked_bar_vax"></div> </br>
+        <div id = "vax_brands"></div>
+        <div id = "daily_cases_recovery"></div>
 
 </div>
 
