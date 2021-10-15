@@ -39,12 +39,12 @@
           </div>
         
           <!-- Daily Covid Cases and Recovery - Left -->
-          <div class = "pure-u-1-2" style="border-style: solid;">
+          <div class = "pure-u-1-2">
             <div id = "daily_cases_recovery" style="margin: 50;"></div>
           </div>
 
           <!-- Donut Chart for cluster analysis - Right -->
-          <div class = "pure-u-2-5" style="border-style: solid;  margin-left: 9%;">
+          <div class = "pure-u-2-5" style= "margin-left: 9%;">
             <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor cupiditate corporis nemo voluptatem amet 
               laudantium animi officia facere commodi, a quia deleniti, blanditiis natus neque maiores voluptates, 
               beatae iure possimus.</p>
@@ -57,13 +57,15 @@
           </div>
 
           <!-- Daily vaccine administered - Left -->
-          <div class = "pure-u-1-2" style="border-style: solid;">
+          <div class = "pure-u-1-2">
             <div id = "stacked_bar_vax"></div>
           </div>
 
           <!-- Waffle Chart/Dot Matrix Chart/ for population vaccinated up to sept 1st 2021 - Right -->
                       <!-- HERE -->
-
+          <div class = "pure-u-2-5" style="margin-left: 9%;">
+            <div id = "waffle_chart"></div>
+          </div>
 
           <!-- Vaccine Brands - Bottom -->
           <div class = "pure-u-1" style="margin-top: 1%;">
@@ -97,6 +99,12 @@
             vegaEmbed('#daily_cases_recovery', vis4).then(function(result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
             }).catch(console.error);
+
+            var vis5 = "js/waffle_chart.vg.json";
+            vegaEmbed('#waffle_chart', vis5).then(function(result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            }).catch(console.error);
+
 
         </script>
 
