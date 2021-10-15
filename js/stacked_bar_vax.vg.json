@@ -5,7 +5,7 @@
         "font": "sans-serif",
         "fontSize": 17
     },
-    "width": 800,
+    "width": 700,
     "height": 400,
     "data": {"url": "https://raw.githubusercontent.com/johanazlan/Data-Visualization-Assignment-2/main/data/vaccination_stacked_bar.csv"}, 
     "transform": [
