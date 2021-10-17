@@ -15,8 +15,8 @@
 
 </head>
 
-    <body>
-        <div class = "pure-g" style = "margin-left: 2%; margin-right: 2%;">
+    <body style = "background-color: #f2f2f2;">
+        <div class = "pure-g" style = "margin-left: 7%; margin-right: 7%; margin-top: 4%; margin-bottom: 4%; background-color: white;">
 
           <!-- Header -->
           <div class = "pure-u-1" style="text-align: center;">
@@ -40,14 +40,12 @@
         
           <!-- Daily Covid Cases and Recovery - Left -->
           <div class = "pure-u-1-2">
-            <div id = "daily_cases_recovery" style="margin: 50;"></div>
+            <div id = "daily_cases_recovery" style="margin-left: 2%;"></div>
           </div>
 
           <!-- Donut Chart for cluster analysis - Right -->
-          <div class = "pure-u-2-5" style= "margin-left: 9%;">
-            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor cupiditate corporis nemo voluptatem amet 
-              laudantium animi officia facere commodi, a quia deleniti, blanditiis natus neque maiores voluptates, 
-              beatae iure possimus.</p>
+          <div class = "pure-u-2-5" style= "margin-left: 5%;">
+            <div id = "donut_category_cases"></div>
           </div>
 
           <!-- VACCINATION SECTION -->
@@ -57,23 +55,24 @@
           </div>
 
           <!-- Daily vaccine administered - Left -->
-          <div class = "pure-u-1-2">
+          <div class = "pure-u-1-2" style="margin-left: 2%;">
             <div id = "stacked_bar_vax"></div>
           </div>
 
           <!-- Waffle Chart/Dot Matrix Chart/ for population vaccinated up to sept 1st 2021 - Right -->
                       <!-- HERE -->
-          <div class = "pure-u-2-5" style="margin-left: 9%;">
+          <div class = "pure-u-2-5" style="margin-left: 8%;">
             <div id = "waffle_chart"></div>
           </div>
 
           <!-- Vaccine Brands - Bottom -->
-          <div class = "pure-u-1" style="margin-top: 1%;">
+          <div class = "pure-u-1" style="margin-top: 1%; margin-left: 4.5%;">
             <div id = "vax_brands"></div>
           </div>
 
           <!-- OTHER SECTION -->
-
+        <div class = "pure-u-1" style="text-align: center; border-style: solid; margin-top: 2%; margin-bottom: 1%; background-color:  rgb(228, 240, 255);">
+          <h2>Deaths</h2>
         </div>
 
 
@@ -102,6 +101,11 @@
 
             var vis5 = "js/waffle_chart.vg.json";
             vegaEmbed('#waffle_chart', vis5).then(function(result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            }).catch(console.error);
+
+            var vis6 = "js/donut_chart.vg.json";
+            vegaEmbed('#donut_category_cases', vis6).then(function(result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
             }).catch(console.error);
 
