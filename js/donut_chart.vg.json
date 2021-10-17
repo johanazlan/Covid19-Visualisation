@@ -1,0 +1,44 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json", 
+    "title": {
+        "text": "% of Cases In Different Categories from 1st June 2021 to 1st September 2021",
+        "font": "sans-serif",
+        "dy": -30,
+        "fontSize": 18
+    },
+    "width": 450,
+    "height": 400,
+    "data": {"url": "https://raw.githubusercontent.com/johanazlan/Data-Visualization-Assignment-2/main/data/donut_cases_category.csv"},
+    "mark": {"type": "arc", "innerRadius": 100}, 
+    "transform": [
+        {"calculate": "{'community': 'Community Areas', 'detentionCentre': 'Detention Centres', 'education': 'Educational Institutions', 'highRisk': 'High Risk Individuals', 'religious': 'Religious places', 'workplace': 'Workplaces'}[datum.category]", "as": "Category"}
+    ],
+
+    "encoding": {
+        "theta": {"field": "percentage", "type": "quantitative"}, 
+        "color": {
+            "field": "Category", 
+            "type": "nominal", 
+            "scale": {
+                "domain": ["Workplaces", "Community Areas", "Detention Centres", "High Risk Individuals", "Educational Institutions", "Religious places"],
+                "range": ["#B1FFFF", "#D6CDEA", "#9FF19A", "#FECB71", "#9AC1D3", "#FFA284"] 
+            }
+        }, 
+        "tooltip": [
+            {"field": "Category", "type": "nominal", "title": "Category"}, 
+            {"field": "percentage", "type": "quantitative", "title": "Total Cases (%)"}, 
+            {"field": "cases_total", "type": "quantitative", "title": "Total Cases"}
+        ]
+
+    }, 
+    "config": {
+        "style": {
+          "cell": {
+            "stroke": "transparent"
+          }
+        }
+      }
+
+    
+
+}

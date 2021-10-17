@@ -1,14 +1,13 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json", 
     "title": {
-        "text": "Vaccine Brands used from 1st June 2021 to 1st September 2021",
         "font": "sans-serif",
         "fontSize": 17
     },
-    "width": 1800,
-    "height": 100,
+    "width": 1375,
+    "height": 150,
     "data": {"url": "https://raw.githubusercontent.com/johanazlan/Data-Visualization-Assignment-2/main/data/vax_brands.csv"},
-    "mark": {"type":"bar", "tooltip": true}, 
+    "mark": {"type":"bar", "tooltip": true, "size": 40}, 
     "transform": [
         {"calculate": "datum.total_doses/18072239 * 100", "as": "percentage of vaccine brands used"}, 
         {"calculate": "{'pfizer1': 'Pfizer', 'sinovac1': 'Sinovac', 'astra1': 'AstraZeneca', 'cansino': 'Cansino'}[datum.vaccine_brand]", "as": "Vaccine Brand"}
@@ -26,7 +25,7 @@
             "type": "nominal", 
             "scale": {
                 "domain": ["Sinovac", "Pfizer", "Cansino", "AstraZeneca"], 
-                "range": ["#adf7b6", "#a0ced9", "#fcf5c7", "#ffc09f"]
+                "range": ["#0077b6", "#D6CDEA", "#FFA284", "#FECB71"]
             },
             "legend": {
                 "direction": "horizontal", 
@@ -34,7 +33,7 @@
                 "orient": "bottom-left", 
                 "title": null, 
                 "symbolSize": 120, 
-                "columnPadding": 30, 
+                "columnPadding": 350, 
                 "labelFontSize":12,
                 "labelFontWeight":500
             }

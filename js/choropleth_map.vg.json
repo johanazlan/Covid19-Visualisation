@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 880,
+    "width": 1100,
     "height": 550,
     "projection": {"type": "equirectangular"},
 
@@ -27,14 +27,15 @@
     "mark": {
         "type": "geoshape", 
         "stroke": "#212121", 
-        "strokeWidth": 1
+        "strokeWidth": 1, 
+        "size": 3000
     }, 
     "encoding": {
         "color": {
             "field": "New cases per 1,000 population",
             "type": "quantitative",
             "scale": {
-                "type": "linear",
+                "type": "threshold",
                 "domain": [1, 20, 50, 100], 
                 "range": ["#fef0d9", "#fdcc8a", "#fc8d59", "#e34a33", "#b30000"]
             }, 
@@ -43,7 +44,7 @@
                 "gradientLength": 180, 
                 "orient": "none",
                 "legendX": 30,
-                "legendY": 80
+                "legendY": 40
             }
         },  
         "tooltip": [

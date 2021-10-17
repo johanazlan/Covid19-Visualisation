@@ -1,15 +1,16 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json", 
     "title": {
-        "text": "Vaccine Progress up to 1st September 2021",
+        "text": "Vaccination Progress up to 1st September 2021",
         "dx": 20,
         "font": "sans-serif",
-        "fontSize": 17
+        "fontSize": 18, 
+        "dy": -35
     },
-    "width": 400,
-    "height": 400,
+    "width": 450,
+    "height": 415,
     "data": {"url": "https://raw.githubusercontent.com/johanazlan/Data-Visualization-Assignment-2/main/data/waffle_chart.csv"},
-    "mark": {"type": "circle", "size": 1200}, 
+    "mark": {"type": "circle", "size": 1300}, 
     "transform":[
         {"calculate": "datum.vax_type", "as": "Vaccination Type"}
     ],
@@ -31,12 +32,16 @@
             "scale": {
                 "type": "ordinal",
                 "domain": ["full", "partial", "unvaccinated"],
-                "range": ["#31a354", "#bae4b3","#ECECEC"]
+                "range": ["#009B48", "#9FF19A","#ECECEC"]
             }, 
             "legend": {
-                "title": "Vaccination Type"
+                "title": "Vaccination Type",  
+                "padding": 40
             }
-        }
+        }, 
+        "tooltip": [
+            {"field": "Vaccination Type", "type": "nominal", "title": "Vaccination Type"}
+        ]
         
     }, 
     "config": {

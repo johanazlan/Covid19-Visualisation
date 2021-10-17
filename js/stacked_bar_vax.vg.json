@@ -3,7 +3,8 @@
     "title": {
         "text": "Daily Vaccination Doses Administered from 1st June 2021 to 1st September 2021",
         "font": "sans-serif",
-        "fontSize": 17
+        "fontSize": 18,
+        "dy": -30
     },
     "width": 700,
     "height": 400,
@@ -21,7 +22,7 @@
             "type":"nominal", 
             "scale": {
                 "domain": ["Fully Vaccinated", "Partially Vaccinated"],
-                "range": ["#bae4b3", "#31a354"]
+                "range": ["#9FF19A", "#009B48"]
             }, 
             "legend": {"title": "Vaccination Type", "symbolType": "circle"}
         },  
