@@ -16,66 +16,108 @@
 </head>
 
     <body style = "background-color: #f2f2f2;">
-        <div class = "pure-g" style = "margin-left: 7%; margin-right: 7%; margin-top: 4%; margin-bottom: 4%; background-color: white;">
+        <div class = "pure-g" style = "margin-left: 9%; margin-right: 9%; margin-top: 4%; margin-bottom: 4%; background-color: white;">
 
           <!-- Header -->
           <div class = "pure-u-1" style="text-align: center;">
             <div id = "header">
-              <br><h1>Covid 19 Pandemic In Malaysia</h1></br>
+              <h1 style="font-size: 42px; font-family: sans-serif;">Covid 19 Pandemic In Malaysia</h1>
+              <p style = "text-align: center;"><i>A Visualization by Johan Azlan (31165001)</i></p>
+              <p style = "text-align: center; margin-left: 12%; margin-right: 12%;">
+                The Visualization analyzes the Covid 19 Cases and Vaccinations during <b>June 1st 2021 to September 1st 2021</b>. 
+                 Malaysia was constantly reporting a surge of daily cases during this period of time. 
+                 At the same time, the vaccination program was ramping up in order to achieve <b style="font-size: larger;">80%</b> vaccinated Malaysians 
+                 by February 2022. Hence, this visualization aims to provide further insights on the cases and vaccinations in Malaysia. 
+              </p>
             </div>
           </div>
 
           <!-- Covid Cases SECTION -->
              <!-- Header - Here -->
-          <div class = "pure-u-1" style="text-align: center; border-style: solid; background-color:  rgb(228, 240, 255);">
-            <h2>Covid 19 Cases</h2>
+          <div class = "pure-u-1" style="text-align: center; border-style: solid; background-color:  rgb(228, 240, 255); margin-top: 3%;">
+            <h1>Covid 19 Cases</h1>
           </div>
 
           <!-- Choropleth Map -->
           <div class = "pure-u-1" style="text-align: center;">
             <h3>Cumulative COVID-19 Cases per 1,000 population from 1st June 2021 to 1st September 2021</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum accusantium magnam mollitia natus explicabo maxime temporibus commodi quos tempore assumenda eum accusamus placeat ipsam, cupiditate reprehenderit rerum et quasi cumque.</p>
+            <p style = "text-align: center; margin-left: 12%; margin-right: 12%;">Malaysia's Covid 19 Cases has been increasing since the start of 2021. 
+              The daily covid cases reached its peak on <b style="font-size:large;">26 August 2021</b> with <b style="font-size: x-large;">24,599</b> daily cases. This is an alarming situation for Malaysia as there has 
+              been multiple lockdowns established but the cases continues to rise. The map shows the cumulative Covid 19 cases per 1k population during 
+              June 1st 2021 to September 1st 2021 for each state. We can take a look at the states with the most Covid cases during this period. 
+            </p>            
             <div id = "choropleth_map"></div>
           </div>
         
           <!-- Daily Covid Cases and Recovery - Left -->
           <div class = "pure-u-1-2">
-            <div id = "daily_cases_recovery" style="margin-left: 2%;"></div>
+            <div id = "daily_cases_recovery" style="margin-left: 8%;"></div>
+            <p style="margin-left: 9%; margin-top: 4%;"> The line chart above shows the daily cases and daily recoveries from <b>1st June to 1st 2021</b>. 
+                It is important to view the trends of <b style="font-size: x-large;"><span style="color: #fb8500;">daily cases</span></b> and 
+                <b style="font-size: x-large;"><span style="color: #0077b6;">daily recoveries</span></b>. It provides a glimpse into
+                the Covid 19 situation in Malaysia. </p>
           </div>
 
           <!-- Donut Chart for cluster analysis - Right -->
-          <div class = "pure-u-2-5" style= "margin-left: 5%;">
-            <div id = "donut_category_cases"></div>
+          <div class = "pure-u-2-5">
+            <div id = "donut_category_cases" style= "margin-left: 12%;"></div>
+            <p style = "margin-left: 22%; margin-top: 4%;">
+              The donut chart shows the percentage of Covid 19 cases in different categories. Based on the visualization, the majority of the cases come from 
+              <b><span style="color: #afeeee; font-size: large;">workplaces (62%)</span></b>, 
+              <b><span style="color: #D6CDEA; font-size: large;">community areas (27%)</span></b> and 
+              <b><span style="color: #9FF19A; font-size: large;">detention centres (6%)</span></b>. 
+
+            </p>
           </div>
 
           <!-- VACCINATION SECTION -->
              <!-- Header - Here -->
           <div class = "pure-u-1" style="text-align: center; border-style: solid; margin-top: 2%; margin-bottom: 1%; background-color:  rgb(228, 240, 255);">
-            <h2>Vaccination</h2>
+            <h1>Vaccination</h1>
+          </div>
+
+          <div class = "pure-u-1" style ="text-align: center;">
+            <p style = "text-align: center; margin-left: 12%; margin-right: 12%;" >
+              Vaccinations are important as it helps to protect us from the deadly virus. Malaysia has been increasing their vaccinations starting from June 1 2021. 
+              This was done to achieve herd immunity as fast as possible. Malaysia aims to reach 80% vaccinated population by February 2022 as it transitions towards
+              endemicity. The 3 visualizations below show the daily vaccination doses administered from 1st June 2021 to 1st September 2021, vaccination progress up to
+              September 2021 and the proportion of vaccine brands used. 
+            </p>
           </div>
 
           <!-- Daily vaccine administered - Left -->
-          <div class = "pure-u-1-2" style="margin-left: 2%;">
-            <div id = "stacked_bar_vax"></div>
+          <div class = "pure-u-1-2">
+            <div id = "stacked_bar_vax" style="margin-left: 8%;"></div>
+            <p style = "margin-left: 9%;">
+              The stacked bar chart shows the daily doses administered for partial doses and also full doses. The period with the most daily doses administered is 
+              in the month of <b style="font-size:large;"> August 2021</b>. The highest doses administered was on <b style="font-size:large;">28 July 2021</b> with 
+              <b style="font-size: large;"><span style="color: #9FF19A;">206,288 fully vaccinated</span> </b> and 
+              <b style="font-size: large;"><span style="color: #009B48;">373,486 partially vaccinated</span></b>.
+            </p>
           </div>
 
           <!-- Waffle Chart/Dot Matrix Chart/ for population vaccinated up to sept 1st 2021 - Right -->
                       <!-- HERE -->
-          <div class = "pure-u-2-5" style="margin-left: 8%;">
-            <div id = "waffle_chart"></div>
+          <div class = "pure-u-2-5">
+            <div id = "waffle_chart" style="margin-left: 25%;"></div>
+            <p style = "margin-left: 25%;"> 
+              The waffle chart shows the vaccination progress up to <b>1st September 2021</b>. <b style="font-size: large;"><span style = "color: #009B48;">47%</span></b> Malaysians 
+              have been <b style="font-size: large;"><span style = "color: #009B48;">fully vaccinated</span></b> and <b style="font-size: large;"><span style="color: #9FF19A;">61%</span></b> 
+              Malaysians are <b style="font-size: large;"><span style="color: #9FF19A;">partially vaccinated</span></b> . Thus, <b>61%</b> of the total population has at least 1 dose while <b>39%</b> 
+              of the total population are unvaccinated.  
+            </p>
           </div>
 
           <!-- Vaccine Brands - Bottom -->
-          <div class = "pure-u-1" style="margin-top: 1%; margin-left: 4.5%;">
-            <div id = "vax_brands"></div>
+          <div class = "pure-u-1">
+            <div id = "vax_brands" style="margin-top: 1%; margin-left: 7%;"></div>
+            <p style="margin-left: 7%; margin-right: 6%; text-align: left;"> 
+              The single horizontal stacked bar chart shows the vaccine brands used from <b>1st June 2021 to 1st September 2021</b>. 
+              The vaccine that was used the most during this period of time was <b style="font-size: large;"><span style="color: #0077b6;">Sinovac (48.9%)</span></b> followed 
+              by <b style="font-size: large;"><span style="color: #D6CDEA;">Pfizer (41.4%)</span></b>, <b style="font-size: large;"><span style="color: #FECB71;">AstraZeneca (9.6%)</span></b> 
+              and <b style="font-size: large;"><span style="color: #FFA284;">Cansino (0.1%)</span></b>.
+            </p>
           </div>
-
-          <!-- OTHER SECTION -->
-        <div class = "pure-u-1" style="text-align: center; border-style: solid; margin-top: 2%; margin-bottom: 1%; background-color:  rgb(228, 240, 255);">
-          <h2>Deaths</h2>
-        </div>
-
-
 
         <script type="text/javascript">
 
