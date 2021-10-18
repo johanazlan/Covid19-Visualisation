@@ -5,12 +5,12 @@
         "dx": 20,
         "font": "sans-serif",
         "fontSize": 18, 
-        "dy": -35
+        "dy":0
     },
-    "width": 450,
-    "height": 415,
+    "width": 460,
+    "height": 390,
     "data": {"url": "https://raw.githubusercontent.com/johanazlan/Data-Visualization-Assignment-2/main/data/waffle_chart.csv"},
-    "mark": {"type": "circle", "size": 1300}, 
+    "mark": {"type": "circle", "size": 1420}, 
     "transform":[
         {"calculate": "datum.vax_type", "as": "Vaccination Type"}
     ],
@@ -36,7 +36,12 @@
             }, 
             "legend": {
                 "title": "Vaccination Type",  
-                "padding": 40
+                "padding": 20, 
+                "orient": "top", 
+                "direction": "horizontal", 
+                "titleFontSize": 12, 
+                "labelFontSize": 12
+                
             }
         }, 
         "tooltip": [

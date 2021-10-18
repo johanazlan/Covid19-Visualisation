@@ -4,9 +4,9 @@
         "text": " Daily New Cases and Recoveries from 1st June 2021 to 1st September 2021",
         "font": "sans-serif",
         "fontSize": 18, 
-        "dy": -25
+        "dy": -22
     },
-    "width": 700,
+    "width": 640,
     "height": 420,
     "data": {"url": "https://raw.githubusercontent.com/johanazlan/Data-Visualization-Assignment-2/main/data/daily_cases_recovery_long.csv"},
 
@@ -30,7 +30,13 @@
                 "range": ["#fb8500", "#0077b6"]
 
             }, 
-            "legend": {"title": null, "symbolType": "circle"}
+            "legend": {
+                "title": null, 
+                "symbolType": "circle", 
+                "direction": "horizontal", 
+                "orient": "top",
+                "labelFontSize": 12
+            }
         },  
         "tooltip": [
             {"field": "date", "type": "temporal", "title": "Date"},

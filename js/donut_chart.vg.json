@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json", 
     "title": {
-        "text": "% of Cases In Different Categories from 1st June 2021 to 1st September 2021",
+        "text": "% of Cases In Different Categories (1st June 2021 to 1st September 2021)",
         "font": "sans-serif",
         "dy": -30,
         "fontSize": 18
@@ -21,7 +21,15 @@
             "type": "nominal", 
             "scale": {
                 "domain": ["Workplaces", "Community Areas", "Detention Centres", "High Risk Individuals", "Educational Institutions", "Religious places"],
-                "range": ["#B1FFFF", "#D6CDEA", "#9FF19A", "#FECB71", "#9AC1D3", "#FFA284"] 
+                "range": ["#afeeee", "#D6CDEA", "#9FF19A", "#FECB71", "#9AC1D3", "#FFA284"] 
+            }, 
+            "legend": {
+                "direction": "horizontal", 
+                "orient": "bottom", 
+                "columns": 3, 
+                "columnPadding": 50, 
+                "titleFontSize": 12, 
+                "labelFontSize": 12
             }
         }, 
         "tooltip": [
